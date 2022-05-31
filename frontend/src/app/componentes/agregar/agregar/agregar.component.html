@@ -2,30 +2,26 @@
   <div class="row">
     <div class="col-lg-4"></div>
     <div class="col-lg-4">
-      <h1>Agregar Equipo</h1>
+      <h1>Nuevo Automovil</h1>
       <form action="http://localhost:4201" method="post">
-        <input type="text" class="form-control" name="marca" placeholder="Marca" [(ngModel)]="equipo.marca" required>
-        <input type="text" class="form-control" name="modelo" placeholder="Modelo" [(ngModel)]="equipo.modelo" required>
-        <input type="text" class="form-control" name="tipo_procesador" placeholder="Procesador"
-               [(ngModel)]="equipo.tipo_procesador" required>
-        <input type="text" class="form-control" name="velocidad_procesador" placeholder="Velocidad de Procesador"
-               [(ngModel)]="equipo.velocidad_procesador" required>
-        <input type="number" class="form-control" name="memoria_ram" placeholder="Memoria RAM"
-               [(ngModel)]="equipo.memoria_ram" required>
-        <input type="number" class="form-control" name="memoria_rom" placeholder="Memoria ROM"
-               [(ngModel)]="equipo.memoria_rom" required>
-        <input type="text" class="form-control" name="tamano_pantalla" placeholder="Tamaño de Pantalla"
-               [(ngModel)]="equipo.tamano_pantalla" required>
-        <input type="text" class="form-control" name="resolucionn" placeholder="Resolución"
-               [(ngModel)]="equipo.resolucionn" required>
-        <input type="number" class="form-control" name="numero_camaras" placeholder="N° de Cámaras"
-               [(ngModel)]="equipo.numero_camaras" required>
-        <input type="text" class="form-control" name="resolucion_camaras" placeholder="Resolución de Cámaras"
-               [(ngModel)]="equipo.resolucion_camaras" required>
-        <input type="text" class="form-control" name="sistema_operativo" placeholder="Sistema operativo"
-               [(ngModel)]="equipo.sistema_operativo" required>
+        <input type="text" class="form-control" name="marca" placeholder="Marca" [(ngModel)]="automovil.marca" required>
+        <input type="text" class="form-control" name="modelo" placeholder="Modelo" [(ngModel)]="automovil.modelo" required>
+        <input type="text" class="form-control" name="anno" placeholder="Año"
+               [(ngModel)]="automovil.anno" required>
+        <input type="text" class="form-control" name="motor" placeholder="Motor"
+               [(ngModel)]="automovil.motor" required>
+        <input type="text" class="form-control" name="color" placeholder="Color"
+               [(ngModel)]="automovil.color" required>
+        <input type="text" class="form-control" name="rine" placeholder="Rin"
+               [(ngModel)]="automovil.rine" required>
+        <input type="text" class="form-control" name="img" placeholder="Imagen Auto"
+               [(ngModel)]="automovil.img" required>
+        <input type="text" class="form-control" name="precio" placeholder="Precio"
+               [(ngModel)]="automovil.precio" required>
+        <input type="text" class="form-control" name="segmento" placeholder="Segmento"
+               [(ngModel)]="automovil.segmento" required>
         <div class="container-flex">
-          <button class="btn btn-primary" (click)="agregarEquipo()">Guardar</button>
+          <button class="btn btn-primary" (click)="agregarAutomovil()">Guardar</button>
         </div>
       </form>
     </div>

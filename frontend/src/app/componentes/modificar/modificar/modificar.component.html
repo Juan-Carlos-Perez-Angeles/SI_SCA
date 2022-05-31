@@ -11,16 +11,16 @@
                [(ngModel)]="automovil.motor" required>
         <input type="text" class="form-control" name="color" placeholder="Color"
                [(ngModel)]="automovil.color" required>
-        <input type="number" class="form-control" name="rine" placeholder="Rin"
+        <input type="text" class="form-control" name="rine" placeholder="Rin"
                [(ngModel)]="automovil.rine" required>
-        <input type="number" class="form-control" name="img" placeholder="Imagen"
+        <input type="text" class="form-control" name="img" placeholder="Imagen"
                [(ngModel)]="automovil.img" required>
         <input type="text" class="form-control" name="precio" placeholder="Precio"
                [(ngModel)]="automovil.precio" required>
         <input type="text" class="form-control" name="segmento" placeholder="Segmento"
                [(ngModel)]="automovil.segmento" required>
         <div class="container-flex">
-          <button class="btn btn-primary" (click)="modificarEquipo()">Guardar</button>
+          <button class="btn btn-primary" (click)="modificarAutomovil()">Guardar</button>
         </div>
       </form>
     </div>

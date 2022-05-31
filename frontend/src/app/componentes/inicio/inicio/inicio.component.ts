@@ -28,12 +28,20 @@ export class InicioComponent implements OnInit {
     );
   }
 
-  editar(i: number) {
-
+  editar(i: any) {
+    this.router.navigate(['index/'+i])
   }
 
-  eliminar(i: number) {
-
+  eliminar(index:number) {
+    // @ts-ignore
+    var id:string= this.ListarAutomovil[index].id_auto;
+    this.automovilService.deleteAutomovil(id).subscribe(
+      res => {
+        console.log('Automovil Eliminado');
+        this.listarAutomovil();
+      },
+      err => console.log(err)
+    );
   }
 
 }
