@@ -1,3 +1,4 @@
+import { ConvertPropertyBindingResult } from '@angular/compiler/src/compiler_util/expression_converter';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Automovil, AutomovilService } from 'src/app/services/automovil.service';
@@ -14,14 +15,24 @@ export class InicioComponent implements OnInit {
   constructor(private automovilService: AutomovilService, private router: Router) { }
 
   ngOnInit(): void {
-    
+    this.listarAutomovil();
   }
 
-  editar(i:number){
+  listarAutomovil() {
+    this.automovilService.getAutomovil().subscribe(
+      res => {
+        this.ListarAutomovil = <any>res;
+        console.log(res);
+      },
+      err => console.log(err)
+    );
+  }
+
+  editar(i: number) {
 
   }
 
-  eliminar(i:number){
+  eliminar(i: number) {
 
   }
 
