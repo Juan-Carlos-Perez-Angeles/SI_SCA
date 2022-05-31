@@ -3,3 +3,4 @@
 frontend/node_modules
 frontend/.vscode
 frontend/.idea
+/API/node_modules/
