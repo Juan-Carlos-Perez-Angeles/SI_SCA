@@ -6,7 +6,7 @@ const port = (process.env.port || 3000);
 
 /* GET home page. */
 router.get('/index', function (req, res, next) {
-    let sql = 'SELECT * FROM dispositivo'
+    let sql = 'SELECT * FROM auto'
     conexion.query(sql, (err, rows, fields) => {
         if (err) {
             throw err;
@@ -17,8 +17,8 @@ router.get('/index', function (req, res, next) {
 });
 
 router.get('/index/:id', function (req, res, next) {
-    const {id} = req.params;
-    let sql = 'SELECT * FROM dispositivo WHERE id_equipo=?'
+    const { id } = req.params;
+    let sql = 'SELECT * FROM auto WHERE id_auto=?'
     conexion.query(sql, [id], (err, rows, fields) => {
         if (err) {
             throw err;
@@ -30,61 +30,55 @@ router.get('/index/:id', function (req, res, next) {
 
 router.post('/index', function (req, res, next) {
     const {
-        marca, modelo, tipo_procesador, velocidad_procesador, memoria_ram, memoria_rom,
-        tamano_pantalla, resolucionn, numero_camaras, resolucion_camaras,
-        sistema_operativo
+        id_auto, marca, modelo, anno, motor, color, rine, img, precio, segmento
     } = req.body
-    let sql = `INSERT INTO dispositivo
-               VALUES (NULL, '${marca}', '${modelo}', '${tipo_procesador}', '${velocidad_procesador}', ${memoria_ram}, ${memoria_rom},
-                       '${tamano_pantalla}', '${resolucionn}', ${numero_camaras}, '${resolucion_camaras}',
-                       '${sistema_operativo}')`
+    let sql = `INSERT INTO auto
+               VALUES (NULL,'${marca}', '${modelo}', ${anno}, '${motor}', '${color}', '${rine}',
+                       '${img}', '${precio}', '${segmento}')`
     conexion.query(sql, (err, rows, fields) => {
         if (err) {
             throw err;
         } else {
-            res.json({status: 'Equipo agregado'});
+            res.json({ status: 'Automovil Agregado' });
         }
     });
 });
 
 router.delete('/index/:id', function (req, res, next) {
-    const {id} = req.params;
+    const { id } = req.params;
     let sql = `DELETE
-               FROM dispositivo
-               WHERE id_equipo = '${id}'`
+               FROM auto
+               WHERE id_auto = '${id}'`
     conexion.query(sql, [id], (err, rows, fields) => {
         if (err) {
             throw err;
         } else {
-            res.json({status: 'Equipo eliminado'});
+            res.json({ status: 'Automovil Eliminado' });
         }
     });
 });
 
 router.put('/index/:id', function (req, res, next) {
-    const {id} = req.params;
+    const { id } = req.params;
     const {
-        marca, modelo, tipo_procesador, velocidad_procesador, memoria_ram, memoria_rom,
-        tamano_pantalla, resolucionn, numero_camaras, resolucion_camaras,
-        sistema_operativo
+        marca, modelo, anno, motor, color, rine,
+        img, precio, segmento
     } = req.body;
-    let sql = `UPDATE dispositivo
+    let sql = `UPDATE auto
                SET marca='${marca}',
                    modelo='${modelo}',
-                   tipo_procesador='${tipo_procesador}',
-                   velocidad_procesador='${velocidad_procesador}',
-                   memoria_ram=${memoria_ram},
-                   memoria_rom=${memoria_rom},
-                   tamano_pantalla='${tamano_pantalla}',
-                   resolucionn='${resolucionn}',
-                   numero_camaras=${numero_camaras},
-                   resolucion_camaras='${resolucion_camaras}',
-                   sistema_operativo='${sistema_operativo}'`
+                   anno=${anno},
+                   motor='${motor}',
+                   color='${color}',
+                   rine='${rine}',
+                   img='${img}',
+                   precio='${precio}',
+                   segmento='${segmento}' WHERE id_auto= '${id}'`
     conexion.query(sql, (err, rows, fields) => {
         if (err) {
             throw err;
         } else {
-            res.json({status: 'Equipo agregado'});
+            res.json({status: 'Automovil Modificado'});
         }
     });
 });
