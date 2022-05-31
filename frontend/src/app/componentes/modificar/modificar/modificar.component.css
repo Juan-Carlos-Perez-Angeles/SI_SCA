@@ -1,0 +1,17 @@
+form {
+    margin-top: 4rem;
+  }
+  
+  input {
+    margin: 2rem;
+  }
+  
+  .container-flex {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  
+  div.container-flex {
+    margin-top: 4rem;
+  }
