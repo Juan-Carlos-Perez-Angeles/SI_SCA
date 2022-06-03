@@ -7,7 +7,7 @@ import { ModificarComponent } from './componentes/modificar/modificar/modificar.
 const routes: Routes = [
   { path: '', component: InicioComponent },
   { path: 'agregar', component: AgregarComponent },
-  { path: 'modificar', component: ModificarComponent }
+  { path: 'modificar/:id', component: ModificarComponent }
 ];
 
 @NgModule({
