@@ -21,27 +21,28 @@
                 </thead>
                 <tbody>
                     <tr *ngFor="let automovil of ListarAutomovil; let i = index">
-                        <th scope="row">{{automovil.id_auto}}</th>
-                        <td>{{automovil.marca}}</td>
-                        <td>{{automovil.modelo}}</td>
-                        <td>{{automovil.anno}}</td>
-                        <td>{{automovil.motor}}</td>
-                        <td>{{automovil.color}}</td>
-                        <td>{{automovil.rine}}</td>
-                        <td>
-                          <img src="{{automovil.img}}" alt="imagen automovil">
-                        </td>
-                        <td>{{automovil.precio}}</td>
-                        <td>{{automovil.segmento}}</td>
-                        <td>
-                            <button (click)="editar(automovil.id_auto)" type="button" class="btn btn-warning">
-                                <i class="bi bi-pencil-square"></i>
-                            </button>
-                        </td>
-                        <td>
-                            <button (click)="eliminar(i)" type="button" class="btn btn-danger">
-                                <i class="bi bi-trash3-fill"></i></button>
-                        </td>
+                      <th scope="row" style="vertical-align: middle">{{automovil.id_auto}}</th>
+                      <td>{{automovil.marca}}</td>
+                      <td>{{automovil.modelo}}</td>
+                      <td>{{automovil.anno}}</td>
+                      <td>{{automovil.motor}}</td>
+                      <td>{{automovil.color}}</td>
+                      <td>{{automovil.rine}}</td>
+                      <td>
+                        <img src="{{automovil.img}}" alt="imagen automovil">
+                      </td>
+                      <td>{{automovil.precio}}</td>
+                      <td>{{automovil.segmento}}</td>
+                      <td>
+                        <button (click)="editar(automovil.id_auto)" type="button" class="btn btn-warning">
+                          <i class="bi bi-pencil-square"></i>
+                        </button>
+                      </td>
+                      <td>
+                        <button (click)="eliminar(i)" type="button" class="btn btn-danger">
+                          <i class="bi bi-trash3-fill"></i>
+                        </button>
+                      </td>
                     </tr>
                 </tbody>
             </table>

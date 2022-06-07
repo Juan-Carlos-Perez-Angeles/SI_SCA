@@ -3,6 +3,12 @@ table {
   text-align: center;
 }
 
+td {
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  vertical-align: middle !important;
+}
+
 img {
   width: 100%;
   height: auto;
