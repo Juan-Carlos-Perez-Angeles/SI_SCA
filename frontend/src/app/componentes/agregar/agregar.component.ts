@@ -33,4 +33,9 @@ export class AgregarComponent implements OnInit {
     this.automovilService.postAutomovil(this.automovil).subscribe();
     this.router.navigate(['']);
   }
+
+  cancelar() {
+    this.router.navigate(['']);
+
+  }
 }
