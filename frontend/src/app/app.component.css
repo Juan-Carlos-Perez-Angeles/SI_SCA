@@ -1,0 +1,11 @@
+li.nav-item{
+  margin-right: 2rem;
+  border: white solid 1px;
+}
+
+@media screen and (orientation: portrait) {
+  li.nav-item{
+    margin-right: 2rem;
+    border: none;
+  }
+}
