@@ -7,8 +7,7 @@ import { Automovil, AutomovilService } from 'src/app/services/automovil.service'
   styleUrls: ['./modificar.component.css']
 })
 export class ModificarComponent implements OnInit {
-
-  @HostBinding('class') clasess = 'row';
+  @HostBinding('class') classes = 'row';
   automovil: Automovil = {
     id_auto: '',
     marca: '',
@@ -26,15 +25,12 @@ export class ModificarComponent implements OnInit {
 
   ngOnInit(): void {
     const params = this.activatedRoute.snapshot.params;
-
     if (params['id']) {
       this.automovilService.getUnAutomovil(params['id']).subscribe(
         res => {
           const info = res;
           const obj = Object.assign({}, info);
           this.automovil = obj;
-          console.log(this.automovil);
-          console.log('ID objeto: ' + this.automovil.id_auto)
         },
         error => console.log(error)
       )
@@ -46,11 +42,10 @@ export class ModificarComponent implements OnInit {
     this.automovilService.updateAutomovil(params['id'], this.automovil).subscribe(
       res => {
         console.log('Objeto actualizado: ' + this.automovil)
-        console.log('info actualizada' + res);
       },
       error => console.log(error)
     );
-    this.router.navigate(['/inicio']);
+    this.router.navigate(['']);
   }
 
 }

@@ -19,11 +19,12 @@ router.get('/index', function (req, res, next) {
 router.get('/index/:id', function (req, res, next) {
     const { id } = req.params;
     let sql = 'SELECT * FROM auto WHERE id_auto=?'
-    conexion.query(sql, [id], (err, rows, fields) => {
+    conexion.query(sql, id, (err, rows, fields) => {
         if (err) {
             throw err;
         } else {
-            res.json(rows);
+            let valor = rows[0];
+            res.json(valor);
         }
     });
 });

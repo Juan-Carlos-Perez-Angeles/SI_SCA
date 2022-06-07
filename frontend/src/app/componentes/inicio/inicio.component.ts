@@ -29,7 +29,7 @@ export class InicioComponent implements OnInit {
   }
 
   editar(i: any) {
-    this.router.navigate(['index/'+i])
+    this.router.navigate(['modificar/'+i])
   }
 
   eliminar(index:number) {

@@ -1,0 +1,31 @@
+<div class="container-fluid">
+      <h1>Modificar Automovil</h1>
+  <div class="row">
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4">
+      <form action="">
+        <input type="text" class="input-form form-control" name="id_auto" value="{{automovil.id_auto}}"
+               placeholder="ID">
+        <input type="text" class="input-form form-control" name="marca" [(ngModel)]="automovil.marca"
+               placeholder="Marca">
+        <input type="text" class="input-form form-control" name="modelo" [(ngModel)]="automovil.modelo"
+               placeholder="Modelo">
+        <input type="text" class="input-form form-control" name="anno" [(ngModel)]="automovil.anno" placeholder="Año">
+        <input type="text" class="input-form form-control" name="motor" [(ngModel)]="automovil.motor"
+               placeholder="Motor">
+        <input type="text" class="input-form form-control" name="color" [(ngModel)]="automovil.color"
+               placeholder="Color">
+        <input type="text" class="input-form form-control" name="rine" [(ngModel)]="automovil.rine" placeholder="Rin">
+        <input type="text" class="input-form form-control" name="img" [(ngModel)]="automovil.img" placeholder="Imagen">
+        <input type="text" class="input-form form-control" name="precio" [(ngModel)]="automovil.precio"
+               placeholder="Precio">
+        <input type="text" class="input-form form-control" name="segmento" [(ngModel)]="automovil.segmento"
+               placeholder="Segmento">
+        <div class="container-flex">
+          <button class="btn btn-primary" (click)="modificarAutomovil()">Guardar</button>
+        </div>
+      </form>
+    </div>
+    <div class="col-lg-4"></div>
+  </div>
+</div>
