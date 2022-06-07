@@ -1,1 +1,62 @@
 /* You can add global styles to this file, and also import other style files */
+div.col-lg-12 {
+  margin: auto;
+  width: 98%;
+}
+
+div.col-lg-10 {
+  margin: auto;
+  width: 80%;
+  padding: 1rem;
+}
+
+div.col-lg-8 {
+  margin: auto;
+  width: 65%;
+  padding: 1rem;
+}
+
+div.col-lg-6 {
+  margin: auto;
+  width: 48%;
+  padding: 1rem;
+}
+
+div.col-lg-4 {
+  margin: auto;
+  width: 30%;
+  padding: 1rem;
+}
+
+div.col-lg-3 {
+  margin: auto;
+  width: 23%;
+  padding: 1rem;
+}
+
+div.col-lg-2 {
+  margin: auto;
+  width: 14%;
+  padding: 1rem;
+}
+
+div.col-lg-1 {
+  margin: auto;
+  width: 8%;
+  padding: 1rem;
+}
+
+.title-form {
+  text-align: center !important;
+  margin-top: 3rem;
+}
+
+input {
+  max-width: 96%;
+  margin-top: 2rem;
+}
+
+.row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
