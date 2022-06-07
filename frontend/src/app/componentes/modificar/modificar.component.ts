@@ -48,4 +48,8 @@ export class ModificarComponent implements OnInit {
     this.router.navigate(['']);
   }
 
+  cancelar() {
+    this.router.navigate(['']);
+
+  }
 }
